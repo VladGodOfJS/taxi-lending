@@ -1,0 +1,25 @@
+//contacts 
+
+.contacts{
+     
+    //обертка блока
+    &__body{
+        background-color: $yel;
+    }
+
+     &__title{
+         @extend .download__text;
+         font-size: 25px;
+         margin: 0;
+         letter-spacing: 0;
+         padding-top: 45px;
+     }
+
+     &__text{
+        @extend .download__text;
+        margin-top: 20px;
+        font-size: 55px;
+        letter-spacing: 0;
+        padding-bottom: 55px;
+     }
+ }

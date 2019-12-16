@@ -1,0 +1,98 @@
+//company
+
+.company{
+     
+    .company__img-block{
+    
+        @include bg;
+        background-image: url('/footer-img/Place_your_Image_here.png');
+        height: 300px;   
+    }
+ }
+
+//  верхняя часть
+.company__body{
+    @include flex($flex,$direction,$position);
+    background-color: #000;
+    height: 300px;
+    opacity: 0.9;
+
+
+    
+    .height-section{
+      
+        @include flex2($flex,$direction2);
+        margin-top: 28px;
+        margin-left: 20px;
+        margin-right: 20px;
+        width: 300px;
+
+        @media(max-width:992px){
+            width: 200px;
+        }
+     
+       &__title{
+           @include fonts($color,18px,400,$text);   
+         
+      
+       }
+   
+       &__border{
+           @include wh(240px,5px);
+           background-color: $yel;
+           margin-top: 30px;
+
+           @media(max-width:992px){
+            width: 200px;
+        }
+   
+       }
+
+       &__text{
+        @include fonts($color,13px,400,inherit);
+        margin-top: 26px;
+        line-height: 15px;
+        width: 220px;
+      
+    }
+
+    &__icons{
+        margin-top: 30px;
+    }
+
+    
+    .title-top{
+        margin-top: 5px;
+    }
+    .border-top{
+        margin-top: 25px;
+    }
+    }
+}
+
+// нижняя часть
+.brand-wrap{
+    display: flex;
+    
+    .brand-icon{
+        &__text{
+            color: $yel;
+            margin-top: 18px;
+            font-size: 14px;
+
+        }
+    }
+    .brand-icon__img{
+        @include flex($flex,column,space-between);
+        margin-top: 20px;
+      
+    }
+
+    .color{
+        @include fonts($color,12px,200,inherit);
+        margin-left: 20px;
+        margin-top: 20px;
+     
+       max-width: 190px;
+    }
+}

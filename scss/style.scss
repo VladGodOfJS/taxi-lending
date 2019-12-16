@@ -1,0 +1,64 @@
+@import url('https://fonts.googleapis.com/css?family=Lato:400,900&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Bebas+Neue&display=swap');
+@import "reset";
+@import "mixin";
+@import "variables";
+@import "header";
+@import "main";
+@import "service";
+@import "rewiev";
+@import "download";
+@import "clients";
+@import "contact";
+@import "company";
+@import "footer";
+
+
+body{
+    font-family: 'Lato';
+}
+.container {
+    @include container;
+    font-family: 'Lato';
+    max-width: 1170px;
+
+    @media (max-width:1200px){
+        .container{
+            max-width: 970px;
+        }
+    }
+    
+    @media (max-width:992px){
+        .container{
+            max-width: 750px;
+        }
+    }
+    
+    @media (max-width:767px){
+        .container{
+            max-width: none;
+        }
+    }
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+ 
+
+ 
+
+
+

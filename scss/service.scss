@@ -1,0 +1,185 @@
+//service
+
+.service{
+    
+    // обертка картинок
+    .service__wrap-img{
+        
+       @include  flex($flex,row,center);
+ 
+       margin: 0 auto;
+
+       @media (max-width:1200px){
+         justify-content:center;
+       
+    }
+
+   
+
+        .service__img{
+           max-width: 24%;
+            @include position($pos,32px,0);
+            z-index: 999; 
+            margin: 0 10px;
+
+            @media (max-width:1200px){
+                margin: 0px 5px;
+           }
+           @media (max-width:576px){
+            display: none;
+          
+       }
+        }
+    }
+
+    &__title{
+       @include fonts($yel,25px,600,$text);
+       margin-top: 40px;
+       text-align: $txt;
+    }
+
+    &__text{
+        @include fonts($blck,30px,600,$text);
+        text-align: $txt;
+        text-transform: uppercase;
+    }
+
+//обертка секций
+    &__wrap-section{
+        @include flex($flex,$direction,center);
+        align-items: flex-start;
+        margin-top: -40px;
+        padding-bottom: 53px; 
+
+
+        @media (max-width:576px){
+            @include flex($flex,column,center);
+            align-items: center;
+            margin-top: 15px;
+            padding-bottom: 0;
+          
+       }
+    }
+
+    &__section{
+        @include wh(265px,300px);
+        background-color: #f5f4f2;
+        margin: 0 13px;
+        text-align: $txt;
+        padding: 0 9px;
+        box-sizing: border-box;
+
+        @media (max-width:576px){
+         
+            margin-top: 15px;
+            background-color: $yel;
+            @include wh(265px,200px);
+          
+
+    
+            &:hover{
+                background-color: #e4e4ee;
+            }
+          
+       }
+
+        &:hover{
+            transition: .5s;
+            background-color: $yel;  
+        }
+
+        .service__price{
+            &:hover{
+                color: $blck;
+          }
+        }    
+        
+    
+    }
+      
+    &__name{
+        @include fonts($blck,21px,600,$text);
+        letter-spacing: 0.5px;
+        margin-top: 84px;
+
+        @media (max-width:576px){
+         
+            margin-top: 15px;
+          
+       }
+    }
+
+    &__info{
+        font-size: 13px;
+        margin-top: 19px;
+    }
+
+    &__price{
+        @include fonts($yel,30px,600,$text);
+        margin-top: 27px;  
+
+        @media(max-width: 576px){
+            color: $blck;
+        }
+    }
+
+    &__btn{
+        @extend .main__btn;
+        @include fonts($blck,21px,400,$text);
+        @include br(5px);
+        font-family: "Bebas Neue";
+        margin-top: 27px;
+        margin-left: 0;
+        padding: 4px 24px;
+        background-color: $yel;
+
+        @media (max-width:576px){
+         
+            margin-top: 10px;
+            width: 70%;
+            background-color: $blck;
+            color: $color;
+            
+          
+       }
+
+
+        &:hover{
+            background-color: $blck;
+            color: $color;
+        }
+    }
+
+// отдельная секция с уникальными стилями
+    &__hover{
+        background-color: $yel;
+        position: relative;
+        overflow: hidden;
+        
+        &::after{
+            @include wh(91px,157px);
+            content: '';
+            background-color: $blck;
+            position: absolute;
+            bottom: -85px;
+            right: -50px;
+            width: 91px;
+            height: 157px;
+            transform: rotate(45deg);
+
+            @media (max-width:576px){
+                @include wh(87px,137px);
+
+           }
+        }
+
+        .service__btn{
+            background-color: $blck;
+            color: $color;
+        }
+
+        .service__price{
+            color: $blck;
+        }
+    }
+}

@@ -1,0 +1,48 @@
+@mixin flex($flex,$direction,$position){
+    display: $flex;
+    flex-direction: $direction;
+    justify-content: $position;
+}
+
+@mixin flex2($flex,$direction2){
+   display: $flex;
+   flex-direction: $direction2;
+}
+
+
+@mixin fonts($color,$fz,$fw,$text){
+    color: $color;
+    font-size: $fz;
+    font-weight: $fw;
+    text-transform: $text;
+}
+
+@mixin wh($w,$h){
+    width: $w;
+    height: $h;
+}
+
+@mixin container{
+    width: $w;
+    box-sizing: border-box;
+    padding: 0 15px;
+    margin: 0 auto;
+
+}
+
+@mixin bg{
+    background-image: (url('/header-img/Layer_3.png'));
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+@mixin br($br){
+    border-radius: $br;
+    
+}
+
+@mixin position($pos,$top,$left){
+    position: $pos;
+    top: $top;
+    left: $left;
+}

@@ -1,0 +1,198 @@
+//main
+
+.main{
+    &__body{
+       @include flex($flex,$direction,$position);
+       background-color: $yel;
+       height: $h + 190px;
+
+       @media(max-width:778px){
+        height: $h + 150px;
+
+      }
+
+      
+      @media(max-width:576px){
+        @include flex($flex,column,center);
+        align-items: center;
+        min-height: $h + 740px;
+      
+      }
+    }
+
+//main form
+    &__info{
+  
+       margin-top: 88px;
+       line-height: 42px;
+       padding-right: 158px;
+
+       @media(max-width:992px){
+         padding-right: 0;;
+       }
+
+       @media(max-width:576px){
+          
+      }
+      
+
+       .main__text{
+        @include fonts($blck,$fz+22,$fw+200,$text);
+        background: none;
+        width: 390px;
+        padding-left: 10px;
+
+
+        @media(max-width:768px){
+           @include fonts($blck,$fz+18,$fw+200,$text);
+           
+
+        }
+     }
+    }
+
+    &__title{
+        @include fonts($blck,$fz+12,$fw+200,$text);
+        padding-left: 10px;
+        
+    }
+   
+    &__other{
+        width: 395px;
+        font-size: $fz - 1px;
+        line-height: 16px;
+        margin-top: 19px;
+        padding-left: 10px;
+    }
+
+    &__btn{
+        @include br(4px);
+        background-color: $blck;
+        outline: none;
+        border: none;
+        padding: 4px 23px;
+        margin-top: 39px;
+        margin-left: 15px;
+
+        @media(max-width:768px){
+           
+            margin-top: 20px;
+
+         }
+
+         @media(max-width:576px){
+           
+           width: 100%;
+           margin: 25px 0;
+         }
+
+    }
+
+    &__link{
+        color: $color;
+        text-decoration: none;
+        text-transform: uppercase;
+        font-family: "Bebas Neue";
+        font-size: $fz + 7px; 
+    
+            &:focus{
+                outline: none;
+            }
+        
+    }
+}
+
+.main{
+
+    //main form
+    &__form{
+        @include wh(300px,335px);
+       
+        margin-top: 106px;
+        background-color: $color;
+
+        @media(max-width:768px){
+            @include wh(300px,295px);
+            padding: 0 10px;
+         }
+
+         @media(max-width:576px){
+            margin-top: 20px;
+            min-width: 405px;
+            height: 550px;
+         }
+
+        .main__text{
+        @include fonts($blck,$fz+10,$fw+200,$text);
+            color: $color;
+            background-color: $blck;
+            padding-left: 25px;
+            height: $h - 245px;
+            line-height: 55px;
+
+            @media(max-width:768px){
+                font-size: $fz+5px;
+             }
+
+    }
+        span{
+            color: $yel;
+        }
+
+        .main__btn{   
+            @extend .main__btn;
+            width: 90%;
+            margin-top: 66px;
+
+            @media(max-width:768px){
+                margin-top: 26px;
+
+             }
+             @media(max-width:768px){
+                width:100%;
+                margin-left: 0;
+
+             }
+     }
+    }
+
+    &__input-wrap{
+        @include  flex($flex,$direction,space-around);
+        flex-wrap: wrap;
+        
+      
+        .i-width{
+            width: 90%;
+        }
+        @media(max-width:576px){
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            margin-top: 0;
+            height: 400px;
+            background-color: #fff;
+        
+         }
+        
+
+    }
+
+    &__input{
+        background: none;
+        border: none;
+        border-bottom: 3px solid #e4e4ee;
+        width: 120px;
+        font-size: $fz;
+        box-sizing: border-box;
+        margin-top: 20px;
+
+
+        @media(max-width:576px){
+           width: 100%;
+           font-weight: 600;
+           font-size: 16px;
+         }
+        
+    }
+ 
+}

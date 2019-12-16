@@ -1,0 +1,102 @@
+// clients
+
+.clients{
+
+    //   обертка всех блоков
+        &__body{
+            @include bg;
+            background-image: url('/clients-img/Place_your_Image.png');
+            background-color:rgba(0,0,0,1);
+        }
+    
+        &__title{
+            @extend .rewiev__title;
+            padding-top: 74px;
+          
+        }
+    
+        &__text{
+            @extend .rewiev__text;
+        }
+     }
+    
+    //  блок обертка для текста
+     .clients-wrap{
+         @include flex($flex,$direction,space-between);
+        
+         max-width: 845px;
+         margin: 0 auto;
+         margin-top: 70px;
+         padding-bottom: 65px;
+    
+         &__block{
+            @include wh(350px,100px);
+            @include br(35px);
+            background-color: $blck;
+            padding: 30px;
+    
+            @media(max-width:992px){
+                @include wh(295px,80px);
+                padding: 26px;
+            }
+         
+       
+           .clients-wrap__text{
+               color: $color;
+               font-size: 13px;
+               line-height: 15px;
+               margin-left: 13px;
+    
+               @media(max-width:992px){
+                font-size: 12px;
+    
+                line-height: 14px;
+    
+            }
+           }
+        }
+     }
+    
+    // блок карточка клиента
+     .clients-card{
+         @include flex($flex,$direction,flex-start);
+         margin-top: 15px;
+    
+         &__img{
+             @include wh(52px,52px);
+             margin-top: 4px;
+             margin-left: 10px;
+    
+             @media(max-width:992px){
+                @include wh(46px,46px);
+                margin-top: 0;
+    
+            }
+         }
+    
+        //  блок инфо клиента
+         .clients-info{
+    
+            margin-left: 15px;
+        
+            &__name{
+                @include fonts($yel,18px,600,$text);
+                margin-top: 10px;
+    
+                @media(max-width:992px){
+                    @include fonts($yel,16px,600,$text);
+                    margin-top: 5px;
+                }
+            }
+            &__text{
+                @include fonts($color,13px,600,$text);
+                margin-top: 3px;
+                margin-left: 5px;
+    
+                @media(max-width:992px){
+                    @include fonts($color,12px,600,$text);
+                    margin-left: 2px;
+                }
+            }
+         }
+     }
